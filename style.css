@@ -57,7 +57,7 @@ body{
 .todo.dark{
 
     background: hsl(237, 14%, 26%);
-    box-shadow: 2px 5px 80px rgba(0, 0, 0, 0.626);
+    box-shadow: 2px 5px 80px rgba(0, 0, 0, 0.126);
 }
 
 .todo-input.dark{
@@ -66,6 +66,45 @@ body{
 
 }
 
+
+.todo-list.dark{
+
+    background: hsl(237, 14%, 26%);
+    box-shadow: 2px 5px 80px rgba(0, 0, 0, 0.626);
+
+}
+
+
+
+.label.dark{
+
+    color: rgba(231, 231, 231, 0.966);
+}
+
+.label.active.dark{
+
+    color: rgb(102, 102, 102);
+}
+
+span.dark::before, span.dark::after{
+
+    background-color: rgb(170, 168, 168);
+
+}
+
+.menu.dark{
+    
+
+    color: rgba(187, 187, 187, 0.644);
+    background: hsl(237, 14%, 26%);;
+
+
+}
+
+.menu.dark p:hover{
+
+    color: rgba(231, 231, 231, 0.966);
+}
 
 /* MAIN PAGE */
 
@@ -86,6 +125,18 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 
+}
+
+.todo-input{
+
+    background: transparent;
+    border: none;
+    width: 410px;
+    margin-left: 15px;
+    height: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 17px;
+    color: rgb(58, 58, 58);
 }
 
 .todo-part{
@@ -155,9 +206,9 @@ h1{
 
 /* TODO CONTENT */
 
-.todo-input{
+.todo-input-list{
 
-    background: transparent;
+    background: red;
     border: none;
     width: 410px;
     margin-left: 15px;
@@ -210,16 +261,64 @@ input:focus{
     height: 49px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid rgb(219, 219, 219);
+    border-bottom: 1px solid rgba(150, 149, 149, 0.301);
+    overflow: hidden;
+    position: relative;
 
 }
 
+.todos input{
+    
+    width: 20px;
+    transform: translateX(-900px);
 
-.todo-input.active{
+}
+
+.todos label{
+
+    color: rgb(46, 45, 45);
+    cursor: pointer;
+}
+
+
+label.active{
 
     text-decoration: line-through;
     color: rgb(163, 163, 163);
+
+}
+
+span{
+
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+}
+
+span::before{
+
+    content: '';
+    width: 18px;
+    height: 1px;
+    display: block;
+    background-color: rgb(63, 62, 62);
+    position: absolute;
+    top: 50%;
+    transform: translateY(0px) rotateZ(45deg);
+
+}
+
+span::after{
+
+    content: '';
+    width: 18px;
+    height: 1px;
+    display: block;
+    background-color: rgb(63, 62, 62);
+    position: absolute;
+    top: 50%;
+    transform: translateY(0px) rotateZ(-45deg);
+
 }
 
 
@@ -238,6 +337,15 @@ input:focus{
     padding: 2px 7px 2px 7px;
     width: 476px;
 
+}
+
+.menu p{
+    cursor: pointer;
+}
+
+.menu p:hover{
+
+    color: hsl(240, 4%, 25%);
 }
 
 #items-left{
@@ -259,3 +367,7 @@ input:focus{
 }
 
 
+.blue{
+
+    color: rgb(58, 32, 170);
+}
