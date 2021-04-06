@@ -12,6 +12,7 @@ body{
 
 }
 
+
 /* DARK MODE */
 
 .change-mode-btn{
@@ -41,9 +42,12 @@ body{
 .body.dark{
 
     background: hsl(235, 21%, 11%);
+
 }
 
-
+.body.dark .label{
+    color: rgba(231, 231, 231, 0.966);
+}
 
 .background-img.dark{
 
@@ -86,6 +90,10 @@ body{
     color: rgb(102, 102, 102);
 }
 
+.body.dark span::before, .body.dark span::after{
+
+    background-color: rgb(170, 168, 168);
+}
 span.dark::before, span.dark::after{
 
     background-color: rgb(170, 168, 168);
@@ -267,6 +275,7 @@ input:focus{
 
 }
 
+
 .todos input{
     
     width: 20px;
@@ -274,7 +283,7 @@ input:focus{
 
 }
 
-.todos label{
+.todos .label{
 
     color: rgb(46, 45, 45);
     cursor: pointer;
@@ -293,6 +302,11 @@ span{
     position: absolute;
     right: 25px;
     cursor: pointer;
+}
+
+.body span::before, .body span::after{
+
+    background-color: rgb(63, 62, 62);
 }
 
 span::before{
@@ -369,5 +383,5 @@ span::after{
 
 .blue{
 
-    color: rgb(58, 32, 170);
+    color: rgb(30, 15, 99);
 }

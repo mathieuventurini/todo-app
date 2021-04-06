@@ -8,8 +8,6 @@ let bgImg = document.querySelector('.background-img');
 let mainTodo = document.querySelector('.todo');
 let todoInput = document.querySelector('.todo-input');
 
-
-
 modeBtn.addEventListener('click', () => {
     modeBtn.classList.toggle('darkmode-btn');
     body.classList.toggle('dark');
@@ -18,7 +16,6 @@ modeBtn.addEventListener('click', () => {
     todoInput.classList.toggle('dark');
     document.querySelector('.todo-list').classList.toggle('dark');
     menu.classList.toggle('dark');
-
 
 })
 
@@ -49,12 +46,10 @@ todoInput.addEventListener('keyup', function(e){
         newTodo(e.target.value);
         menu.style.display = "flex";
         todoInput.value = "";
-        itemsLeft(+1);
-        
+        itemsLeft(+1);  
     }
 
 });
-
 
 
 function newTodo(value){
@@ -124,6 +119,8 @@ function newTodo(value){
         todoCross.classList.toggle('dark');
     
     });
+
+// DRAG N DROP
     
     todo.draggable = true,
     todo.addEventListener('dragstart', (e) => {
@@ -215,7 +212,6 @@ function newTodo(value){
 };
 
 
-
 // ITEMS LEFT
 
 let menu = document.querySelector('.menu');
@@ -233,6 +229,12 @@ function itemsLeft(value){
     }
 
     document.querySelector('span').addEventListener('click', () => {
+        if(itemsLeftNumber == 0){
+            menu.style.display = 'none';
+        }
+    });
+
+    document.getElementById('clear').addEventListener('click', () =>{
         if(itemsLeftNumber == 0){
             menu.style.display = 'none';
         }
