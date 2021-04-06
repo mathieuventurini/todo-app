@@ -16,6 +16,7 @@ modeBtn.addEventListener('click', () => {
     todoInput.classList.toggle('dark');
     document.querySelector('.todo-list').classList.toggle('dark');
     menu.classList.toggle('dark');
+    document.querySelector('.tasks').classList.toggle('dark');
 
 })
 
@@ -67,6 +68,7 @@ function newTodo(value){
     circlesOnList.addEventListener('click', () =>{
             circlesOnList.classList.toggle('circle-active');
             todoLabel.classList.toggle('active');
+       
             if(todoInputList.checked){
                 todoInputList.checked = false;
                 itemsLeft(+1);
@@ -91,6 +93,7 @@ function newTodo(value){
     todoLabel.addEventListener('click', ()=>{
         circlesOnList.classList.toggle('circle-active');
         todoLabel.classList.toggle('active');
+
         if(todoInputList.checked){
             todoInputList.checked = false;
             itemsLeft(+1);
